@@ -2,8 +2,10 @@ body {
     margin: 0;
 }
 
+
+
 h1 {
-    font-size: 48px;
+    font-size: 53px;
 }
 
 h2 {
@@ -20,6 +22,10 @@ h4 {
 
 p {
     font-size: 14px;
+}
+
+.todo {
+  
 }
 
 #fondo-nav-head {
@@ -43,11 +49,15 @@ p {
 }
 
 .header {
-    height: 70vh;
-    padding: 30px;
+    height: 83vh;
+    padding-left: 30px;
     display: grid;
     grid-template-columns: 1fr 1fr;
     justify-content: left;
+}
+#subtitulo h2{
+    padding: 0px;
+    margin: 0px;
 }
 .header button {
     font-size: 32px;
@@ -61,7 +71,7 @@ p {
 
 
 .titulo-subtitulo {
-      color: white;
+    color: #f7fcff;
     width: 100%;
     height: 100%;
     grid-column: 1/2;
@@ -69,58 +79,48 @@ p {
 
 
 .seccion-1 {
-    color: white;
-    width: 100%;
-    background-color: rgb(73, 73, 73);
-    text-align: center;
+    color: #f7fcff;
+    background-color: #172026;
 }
 
 .bullets-1 {
-    color: black;
+    color: #f7fcff;
     display: flex;
     flex-direction: row;
-    justify-items: normal;
+    align-items: center;
     justify-content: space-evenly;
     gap: 20px;
     padding: 40px;
 }
-.bullets-1 img{
-    width: 100px;
-    height: 100px;
-}
 
-.bullets-1 img{
-    width: 89px;
-    height: auto;
-}
+
 
 .titulo-bullets-1 {
+    margin: 0;
     display: flex;
     justify-content: center;
 }
 
-.bullet-hijo-1 {
-    width: 150px;
-   
-}
-
-.bullet-hijo-2 {
-    width: 150px;
-
-}
-
-.bullet-hijo-3 {
-    width: 150px;
-
-}
-
-.bullet-hijo-4 {
-    width: 150px;
+.bullet-hijo {
+   color: #f7fcff;
+   display: flex;
+   flex-direction: column;
    align-items: center;
+   border: #bff205 2px solid;
+   width: 150px;
+   height: 250px;
+}
+
+.bullet-hijo img {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
 }
 
 
 .img-contenido {
+    color: #f7fcff;
+    background-color: #172026;
     display: flex;
     flex-direction: row;
 }
@@ -134,13 +134,15 @@ p {
     background-position: left;
 }
 .contenido {
-    background-color: rgb(197, 197, 197);
+    background-color: #172026;
     width: 50%;
     padding: 20px;
 }
 
 
 .bullets-2-form {
+    color: #f7fcff;
+    background-color: #172026;
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 40px;
@@ -166,7 +168,7 @@ p {
 }
 textarea {
     background-color: #F2E20550;
-    color: white;
+    color: #f7fcff;
     padding: 10px;
     outline: none;
     border-radius: 4px;
@@ -174,14 +176,14 @@ textarea {
 }
 
 form {
-    margin: 10px 50px 10px 40px;
+    margin: 10px 0;
     display: flex;
     flex-direction: column;
     gap: 10px;
 }
 input {
     background-color: #F2E20550;
-    color: white;
+    color: #f7fcff;
     padding: 10px;
     outline: none;
     border-radius: 4px;
@@ -198,6 +200,8 @@ input[type="submit"] {
 
 
 .cont-contador-padre{
+    color: #f7fcff;
+    background-color: #172026;
     height: 150px;
     width: 100%;
     display: grid;
@@ -206,6 +210,9 @@ input[type="submit"] {
    
 }
 .cont-contador {
+    border-top: #F2E205 2px solid;
+    border-bottom: #F2E205 2px solid;
+    background-color: #F2E20550;
     display: flex;
     align-items: center;
 }
@@ -215,20 +222,24 @@ input[type="submit"] {
     height: 96px;
 }
 .contador {
+    border-top: #F2E205 2px solid;
+    border-bottom: #F2E205 2px solid;
+    background-color: #F2E20550;
     display: flex;
     align-items: center;
 }
 
-footer {
-    background-color: rgb(200, 200, 200);
+.footer-grilla {
+    color: #f7fcff;
+    background-color: #172026;
     padding: 10px 40px 10px 40px;
     height: 350px;
-    width: 100%;
+   
     display: grid;
-    grid-template-columns: 1fr 2fr  1fr;
-    justify-content: space-evenly;
+    grid-template-columns: 1fr 1fr;
+
     align-items: center;
-    box-sizing: border-box;
+    
 }
 .cont-footer {
     display: flex;
@@ -238,4 +249,18 @@ footer {
     display: flex;
     
 }
-
+.patrocinadores {
+    
+    background-color: #172026;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    align-items: center;
+    justify-content: center;
+}
+.patrocinadores img{
+    margin-bottom: 20px;
+    box-sizing: border-box;
+    height: 50px;
+    width: auto;
+}
