@@ -71,27 +71,27 @@
                 <h2>Es muy facil</h2>
                 <div class="bullets-form">
                     <div class="bullets-pasos">
-                        <div class=bul2-1>
-                            <img src="img/placeholder.png" alt="">
-                            <h3>1</h3>
-                            <h4>subtitulo</h4>
+                        <div class=bul2>
+                            <img src="img/bullet2-1.png" alt="">
+                            <h3>1. Deja tu mail</h3>
+                            <h4>Asegurá tu lugar </h4>
                         </div>
-                        <div class=bul2-2>
-                            <img src="img/placeholder.png" alt="">
-                            <h3>2</h3>
-                            <h4>subtitulo</h4>
+                        <div class=bul2>
+                            <img src="img/bullet2-2.png" alt="">
+                            <h3>2. Contactanos</h3>
+                            <h4>¿Por qué queres ir?</h4>
                         </div>
-                        <div class=bul2-3>
-                            <img src="img/placeholder.png" alt="">
-                            <h3>3</h3>
-                            <h4>subtitulo</h4>
+                        <div class=bul2>
+                            <img src="img/bullet2-3.png" alt="">
+                            <h3>3. Confirmación</h3>
+                            <h4>Te llegará un email de confirmación</h4>
                         </div>
                     </div>
                 </div>
 
             </section>
             <section class="form-contenedor">
-                <form action="">
+                <form action="" id="formulario">
                     <label for="nombre">Nombre</label>
                     <input type="text" name="nombre" id="nombre" placeholder="Tu nombre" required>
                     <label for="email">Dirección de correo electrónico</label>
@@ -99,8 +99,13 @@
                     <label for="mensaje">Mensaje</label>
                     <textarea name="mensaje" id="mensaje" cols="60" rows="10"
                         placeholder="Escribí tu mensaje"></textarea>
-                    <input type="submit" value="Anotate ya!">
+                    <input type="submit" id="submit" value="Anotate ya!">
                 </form>
+                <section class="feedback oculto" id="feedback">
+                    <p>!Gracias <span id="nombre-placeholder">NOMBRE</span> tu mensaje "<span id="mensaje-placeholder">MENSAJE</span>" ha sido enviado. Te contactaremos a <span id="email-placeholder">EMAIL</span></p>
+                </section>
+
+
             </section>
 
         </section>
@@ -145,6 +150,8 @@
                 </div>
         </footer>
     </div>
+
+    <script src="script.js"></script>
 </body>
 
 </html>
