@@ -24,8 +24,10 @@ p {
     font-size: 14px;
 }
 
-.todo {
-    
+.logo {
+    scale: 0.5;  
+    transform-origin: left center;
+    padding: 25px 30px 25px 53px;
 }
 
 #fondo-nav-head {
@@ -48,8 +50,8 @@ p {
 }
 
 .header {
-    height: 83vh;
-    padding-left: 30px;
+    margin-left: 53px;
+    height: 88vh;
     display: grid;
     grid-template-columns: 1fr 1fr;
     justify-content: left;
@@ -75,10 +77,14 @@ p {
 
 
 .titulo-subtitulo {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
     color: #f7fcff;
     width: 100%;
     height: 100%;
-    grid-column: 1/2;
+
 }
 
 
@@ -88,15 +94,17 @@ p {
 }
 
 .bullets-1 {
+    height: 45vh;
     color: #f7fcff;
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-between;
-    padding-left: 30px;
-    padding-right: 30px;
+    justify-content: space-around;
 }
-
+.bullets-1 h3 {
+    padding: 0px;
+    margin: 0px;
+}
 
 
 .titulo-bullets-1 {
@@ -108,6 +116,7 @@ p {
 }
 
 .bullet-hijo {
+   text-align: center;
    color: #f7fcff;
    display: flex;
    flex-direction: column;
@@ -117,38 +126,59 @@ p {
 }
 
 .bullet-hijo img {
-    width: 80px;
-    height: 80px;
+    width: 60px;
+    height: 60px;
     object-fit: contain;
 }
 
+.texto-chico {
+    text-align: center;
+}
+
+.img {
+    padding-bottom: 30px;
+    width: 50px;
+    height: 50px;
+}
 
 .img-contenido {
+    border-top: #F2E205 2px solid;
+    border-bottom: #F2E205 2px solid;
     color: #f7fcff;
     background-color: #172026;
-    display: flex;
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    height: 400px;
+    overflow: hidden;
 }
 
-.imagen {
-    width: 50%;
-    height: 402px;
-    background-image: url(img/img-1.png);   
-    background-size: 785px 402px; 
-    background-repeat: no-repeat;
-    background-position: left;
+.imagen-diagonal {
+    overflow: hidden;
 }
+.imagen-diagonal img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    clip-path: polygon(0 0, 100% 0, 80% 100%, 0 100%);
+}
+
 .contenido {
     background-color: #172026;
-    width: 50%;
-    padding-left: 30px;
-    padding-right: 30px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-right: 53px;
+}
+.contenido p {
+    padding: 0px;
+    margin: 0px;
+    font-size: 18px;
 }
 
-
 .bullets-2-form {
-    padding-left: 30px;
-    padding-right: 30px;
+    padding-left: 53px;
+    padding-right: 53px ;
     color: #f7fcff;
     background-color: #172026;
     display: grid;
@@ -161,7 +191,7 @@ p {
     display: flex;
     flex-direction: row;
     align-content: end;
-    gap : 20px;
+
 }
 .bul2{
     width: 100%;
@@ -184,7 +214,8 @@ p {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
 textarea {
     background-color: #F2E20550;
@@ -196,7 +227,8 @@ textarea {
 }
 
 form {
-    margin: 10px 0;
+    width: 100%;
+    margin: 10px 35px 10px 10px ;
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -211,7 +243,6 @@ input {
 input[type="submit"] {
     background-color: #F2E205;
     color: black;
-    padding: 10px 20px;
     border: none;
     border-radius: 4px;
     cursor: pointer;
@@ -222,7 +253,7 @@ input[type="submit"] {
     color: #f7fcff;
     background-color: #172026;
     border: #F2E205 2px solid;
-    padding: 20px;
+  
     margin-top: 20px;    
 }
 .oculto {
@@ -236,7 +267,7 @@ input[type="submit"] {
     height: 150px;
     width: 100%;
     display: grid;
-    grid-template-columns: 3fr 1fr;
+    grid-template-columns: 1fr 1fr;
     justify-content: center;
    
 }
@@ -246,15 +277,31 @@ input[type="submit"] {
     background-color: #F2E20550;
     display: flex;
     align-items: center;
-    padding-left: 30px;
-    padding-right: 30px;
+    padding-left: 53px;  
 }
 .cont-contador img{
-    padding: 20px;
     width: 86px;
     height: 96px;
-    align-items: center;
+    margin: 0;
+    padding: 10px;
 }
+.txt-contador {
+    padding-left: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.txt-contador h3 {
+    margin: 0;
+    padding: 0;
+    font-size: 24px;
+    font-weight: bold;
+}
+.txt-contador p {
+    margin: 0;
+    padding: 9px;
+}
+
 .contador {
     border-top: #F2E205 2px solid;
     border-bottom: #F2E205 2px solid;
@@ -263,36 +310,46 @@ input[type="submit"] {
     align-items: center;
     justify-content: space-around;
     text-align: center;
-    padding-right: 30px;
+    padding-right: 53px;
 }
 .separador {
-    margin-bottom: 40px;
+    font-size: 30px;
 }
 .contador p {
+    margin: 0;
     font-size: large;
+    font-weight: bold;
 }
 .contador div span {
    font-size: 25px;
+   font-weight: bold;
 }
 
 
 .footer-grilla {
     color: #f7fcff;
     background-color: #172026;
-    padding: 10px 30px 10px 30px;
     height: 350px;
     display: grid;
     grid-template-columns: 1fr  1fr;
     align-items: center;
-    padding-left: 50px;
+    width: 100%;
 }
 .cont-footer {
     display: flex;
     flex-direction: column;
+    padding-left: 30px;
 }
 .redes {
     display: flex;
-    
+    gap: 20px;
+    justify-content: flex-end;
+    padding: 30px;
+}
+.redes img {
+    width: 35px;
+    height: 35px;
+    object-fit: contain;
 }
 .patrocinadores {
     background-color: #172026;
@@ -355,6 +412,7 @@ p {
      display: flex;
      flex-direction: column;
      width: 100%;   
+     height: auto;
     }
 
     .imagen {
@@ -371,6 +429,14 @@ p {
         flex-direction: column;
     }
 
+    .form-contenedor {
+        margin: 10px;
+    }
+    form {
+        margin: 0;
+        padding: 0;
+    } 
+
     .cont-contador-padre {
         grid-template-columns: 1fr;
         align-items: center;
@@ -385,15 +451,28 @@ p {
        border-top: none;
        padding: 10px;
     }
+    .imagen-diagonal img{
+        height: 100%;
+        clip-path: none;
+    }
 
+
+    .footer-grilla{
+    grid-template-columns: 1fr;
+    }
+    .redes {
+        justify-content: center;
+    }   
 
     .patrocinadores {
-        width: 100%;
+        width: 100vw;
         display: flex;
         flex-direction: row;
         flex-wrap: nowrap;
         overflow-x: auto;
         scroll-snap-type: x mandatory;
+
+        
     }
     .patrocinadores img {
         width: auto;
