@@ -26,9 +26,14 @@ p {
 
 .logo {
     scale: 0.5;  
-    transform-origin: left center;
+    transform-origin: -55px;
     padding: 25px 30px 25px 53px;
 }
+
+#logo-header {
+    margin-left: 53px;
+}
+   
 
 #fondo-nav-head {
     background:
@@ -84,7 +89,6 @@ p {
     color: #f7fcff;
     width: 100%;
     height: 100%;
-
 }
 
 
@@ -191,18 +195,20 @@ p {
     display: flex;
     flex-direction: row;
     align-content: end;
+    gap: 20px;
 
 }
 .bul2{
+    margin: ;
     width: 100%;
     align-items: center;
     text-align: center;
     display: flex;
     flex-direction: column;
 }
-.bul2 h1 {
-    padding: 0;
-    margin: 0;
+.bul2 h3 {
+    padding: 0px;
+    margin: 0px;
 }
 .bullets-pasos img{
     width: 50px;
@@ -250,10 +256,12 @@ input[type="submit"] {
 
 
 .feedback {
+    width: 100%;
+    height: 100%;
     color: #f7fcff;
     background-color: #172026;
     border: #F2E205 2px solid;
-  
+    text-align: center;
     margin-top: 20px;    
 }
 .oculto {
@@ -369,6 +377,7 @@ input[type="submit"] {
 @media (max-width: 600px) {
 
 
+
     h1 {
     font-size: 32x;
 }
@@ -390,13 +399,13 @@ p {
 }
 
     .header {
-        grid-template-columns: 1fr;
-        text-align: center;
-        padding: 10px;
+        display: flex;
+        padding: 0px;
+        margin-left: 10px;
     }
     .bullets-1 {
         padding: 0;
-        width: 100%;
+        width: 95%;
         display: flex;
         overflow-x: auto;
         scroll-snap-type: x mandatory;
@@ -406,6 +415,8 @@ p {
     .bullet-hijo {
         width: 200px;
         flex-shrink: 0;
+        padding-top:20px;
+        gap: 20px;
     }
 
     .img-contenido {
@@ -419,18 +430,33 @@ p {
         width: 100%;
     }
     .contenido {
-        width: 80%;
-       
+       width: 80%;
+       padding: 10px;
+       text-align: left;
     }
 
     .bullets-2-form {
-        padding: 0;
+        padding: 10px;
         display: flex;
         flex-direction: column;
+       
+        gap: 40px;
+        padding: 10px;
+    }
+    .bul2 {
+        padding: 20px 10px 20px 10px;
+        width: 400px;
+    }
+    .bullets-pasos {
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
     }
 
+
     .form-contenedor {
-        margin: 10px;
+         width: 100%;
+        padding-left: 10px;
+        padding-right: 10px;
     }
     form {
         margin: 0;
@@ -452,16 +478,25 @@ p {
        padding: 10px;
     }
     .imagen-diagonal img{
+        
         height: 100%;
         clip-path: none;
     }
 
+    .cont-footer{
+        justify-content: center;
+        width: 375px;
+        box-sizing: border-box;
+        padding-left: 0;
+    }
 
     .footer-grilla{
     grid-template-columns: 1fr;
+    text-align: center;
     }
     .redes {
-        justify-content: center;
+       justify-content: center;
+       height: auto;
     }   
 
     .patrocinadores {
@@ -471,13 +506,12 @@ p {
         flex-wrap: nowrap;
         overflow-x: auto;
         scroll-snap-type: x mandatory;
-
-        
     }
     .patrocinadores img {
-        width: auto;
         height: 25px;
         flex-shrink: 0;
         scroll-snap-align: center;
     }
+
+   
 }
