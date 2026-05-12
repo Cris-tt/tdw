@@ -1,6 +1,8 @@
 body {
     margin: 0;
+    font-family: "Eras Bold ITC", sans-serif;
 }
+
 
 
 
@@ -172,7 +174,7 @@ p {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding-right: 53px;
+    padding-right: 0px;
 }
 .contenido p {
     padding: 0px;
@@ -196,7 +198,10 @@ p {
     flex-direction: row;
     align-content: end;
     gap: 20px;
-
+    padding-right: 20px;
+}
+.bullets-pasos h3{
+    margin: 10px;
 }
 .bul2{
     margin: ;
@@ -209,6 +214,10 @@ p {
 .bul2 h3 {
     padding: 0px;
     margin: 0px;
+}
+.bul2 img {
+    margin-top: 20px;
+    margin: 14px;
 }
 .bullets-pasos img{
     width: 50px;
@@ -253,6 +262,9 @@ input[type="submit"] {
     border-radius: 4px;
     cursor: pointer;
 }
+#feedback-amarillo {
+    color: #F2E205;
+}
 
 
 .feedback {
@@ -286,6 +298,7 @@ input[type="submit"] {
     display: flex;
     align-items: center;
     padding-left: 53px;  
+    padding-right: 53px; 
 }
 .cont-contador img{
     width: 86px;
@@ -375,9 +388,9 @@ input[type="submit"] {
 }
 
 @media (max-width: 600px) {
-
-
-
+body {
+    width: 376px;
+};
     h1 {
     font-size: 32x;
 }
@@ -397,11 +410,20 @@ h4 {
 p {
     font-size: 14px;
 }
+    .logo {
+        padding-right: 20px;
+         transform-origin: 29px;
+    }
+    
 
     .header {
         display: flex;
         padding: 0px;
         margin-left: 10px;
+        margin-right: 0px;
+    }
+    .titulo-subtitulo {
+        margin-right: 0px;
     }
     .bullets-1 {
         padding: 0;
@@ -411,12 +433,14 @@ p {
         scroll-snap-type: x mandatory;
         gap: 16px;
         padding: 10px;
+        margin-right: 0px;
     }
     .bullet-hijo {
         width: 200px;
         flex-shrink: 0;
         padding-top:20px;
         gap: 20px;
+
     }
 
     .img-contenido {
@@ -424,15 +448,17 @@ p {
      flex-direction: column;
      width: 100%;   
      height: auto;
+      margin-right: 0px;
     }
 
     .imagen {
         width: 100%;
     }
     .contenido {
-       width: 80%;
+       width: 100%;
        padding: 10px;
        text-align: left;
+       margin: 0px;
     }
 
     .bullets-2-form {
@@ -442,11 +468,17 @@ p {
        
         gap: 40px;
         padding: 10px;
+        margin: 0px;
     }
     .bul2 {
         padding: 20px 10px 20px 10px;
         width: 400px;
+        margin: 0px;
     }
+    .bul2 img{
+        margin: 0px;
+    }
+
     .bullets-pasos {
         overflow-x: auto;
         scroll-snap-type: x mandatory;
@@ -471,7 +503,11 @@ p {
         border-top: #F2E205 2px solid;
     }
     .cont-contador {
+        padding: 0px;
+        text-align: left;
         border: none;
+
+
     }
     .contador {
        border-top: none;
