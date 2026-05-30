@@ -9,6 +9,8 @@ var input_submit = document.getElementById("submit");
 input_submit.addEventListener("click", enviarFormulario);
 
 function enviarFormulario(event) {
+
+
     event.preventDefault();
 
     var valor_nombre = input_nombre.value;
@@ -36,7 +38,7 @@ function enviarFormulario(event) {
 //Funcion de contador
 function actualizarContador() {
     const fechaActual = new Date();
-    const fechaEvento = new Date(2026, 4, 16, 12, 30, 30);
+    const fechaEvento = new Date(2026, 5, 5, 12, 30, 30);
 
     const diferencia = fechaEvento - fechaActual;  //a miiliseundos
     // Calcular días, horas, minutos y segundos a partir de la diferencia
@@ -50,7 +52,7 @@ function actualizarContador() {
     const minutos = Math.floor((diferencia % (1000 * 60 * 60)) / (1000 * 60));
     const segundos = Math.floor((diferencia % (1000 * 60)) / 1000);
     // Actualizar el contenido de los elementos HTML con los valores calculados
-    document.getElementById("dias").textContent = dias;
+    document.getElementById("dias").textContent = dias.toString().padStart(2, '0');
     document.getElementById("horas").textContent = horas;
     document.getElementById("minutos").textContent = minutos;
     document.getElementById("segundos").textContent = segundos;
